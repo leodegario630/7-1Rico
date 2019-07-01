@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Egg_timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdI-8z-tYi">
+                                <rect key="frame" x="0.0" y="33" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Egg Timer" id="TuR-K0-ddr">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="pause" id="wDg-U7-8HC">
+                                            <connections>
+                                                <action selector="pausePressed:" destination="BYZ-38-t0r" id="fW1-1L-a6Z"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="EGT-73-6fI">
+                                            <connections>
+                                                <action selector="playPressed:" destination="BYZ-38-t0r" id="4ZP-lq-KGa"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="210" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vO9-PT-ICc">
+                                <rect key="frame" x="168.5" y="268" width="38.5" height="131"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3u-Xu-dd8">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="-10" id="XpN-wG-w0T">
+                                        <connections>
+                                            <action selector="minusTenPressed:" destination="BYZ-38-t0r" id="bss-2t-DNw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cKf-6w-tG2"/>
+                                    <barButtonItem title="Reset" id="naD-Xx-zbA">
+                                        <connections>
+                                            <action selector="resetPressed:" destination="BYZ-38-t0r" id="rbH-CJ-SLW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iQB-hv-wUf"/>
+                                    <barButtonItem title="+10" id="hv9-fo-5tu">
+                                        <connections>
+                                            <action selector="addTenPressed:" destination="BYZ-38-t0r" id="v4a-e0-vdu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vO9-PT-ICc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="248" id="5dh-gq-eOS"/>
+                            <constraint firstItem="K3u-Xu-dd8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Exp-RS-nOk"/>
+                            <constraint firstItem="vO9-PT-ICc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y3c-QK-BuN"/>
+                            <constraint firstItem="K3u-Xu-dd8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="603" id="des-KZ-NR9"/>
+                            <constraint firstItem="K3u-Xu-dd8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="j9g-Lw-n7g"/>
+                            <constraint firstItem="vO9-PT-ICc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="spk-BO-6sL"/>
+                            <constraint firstItem="gdI-8z-tYi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="xVL-Se-qQQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="screen" destination="vO9-PT-ICc" id="cX2-Ke-kkM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
